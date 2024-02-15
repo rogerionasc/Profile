@@ -303,7 +303,7 @@
  }
 
 /*  600 */
-@media (max-width: 50em){
+@media (max-width: 35em){
     .section-project {
         justify-content: center;
     }
