@@ -282,7 +282,7 @@
 }
 
 /*  1200 */
-@media (max-width: 75em){
+@media (max-width: 1200px){
     .section-project {
         display: inline-flex;
         flex-wrap: wrap;
@@ -294,8 +294,8 @@
     }
 }
 
-/*  900 */
-@media (max-width: 50em){
+/*  800 */
+@media (max-width: 800px){
     .main-header {
         display: none;
 
@@ -303,7 +303,7 @@
  }
 
 /*  600 */
-@media (max-width: 35em){
+@media (max-width: 560px){
     .section-project {
         justify-content: center;
     }
