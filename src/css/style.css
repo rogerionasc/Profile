@@ -282,7 +282,7 @@
 }
 
 /*  1200 */
-@media (max-width: 1200px){
+@media screen and (max-width: 1200px){
     .section-project {
         display: inline-flex;
         flex-wrap: wrap;
@@ -295,7 +295,7 @@
 }
 
 /*  800 */
-@media (max-width: 800px){
+@media screen and(max-width: 800px){
     .main-header {
         display: none;
 
@@ -303,7 +303,7 @@
  }
 
 /*  600 */
-@media (max-width: 560px){
+@media screen and (max-width: 560px){
     .section-project {
         justify-content: center;
     }
