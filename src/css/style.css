@@ -26,9 +26,13 @@ body {
 }
 
 /*  ANIMATED  */
-@keyframes borderRotate {
-    100% {
-        --angle: 420deg;
+@keyframes menutoggle {
+    from {
+        width: 0;
+    }
+    to {
+        /*width: calc(60% - 20px);*/
+        width: calc(60% - 20px);
     }
 }
 
@@ -47,6 +51,11 @@ body {
     }
     to {
         border-right-color: transparent;
+    }
+}
+@keyframes borderRotate {
+    100% {
+        --angle: 420deg;
     }
 }
 
@@ -78,11 +87,14 @@ body {
     top: 0;
     left: 0;
     padding: 20px;
-    width: calc(60% - 20px);
+    /*width: calc(60% - 20px);*/
     height: 100%;
     z-index: 10;
+    width: 0;
     border: thin solid #FFFFFF0F;
     display: none;
+    animation: menutoggle 0.2s both ;
+
 }
 
 .menu-toggle::before {
