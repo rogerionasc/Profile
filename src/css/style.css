@@ -9,6 +9,11 @@
     --angle: 90deg;
 }
 
+body {
+    display: flex;
+    padding: 20px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -71,7 +76,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: calc(100vh - 40px);
-    padding: 20px;
+
 }
 
 .logo > img {
@@ -138,14 +143,20 @@
 .fa {
     box-sizing: content-box;
     font-size: 28px;
-    color: white;
+    color: #909090;
     padding: 0 10px 0 10px;
     max-width: 28px;
     margin: 0 0;
     opacity: 0.6;
 }
+.fa-bars {
+    box-sizing: content-box;
+    font-size: 28px;
+    color: white;
+    opacity: 0.6;
+}
 
-.fa:hover {
+.fa-bars:hover,.fa:hover {
     opacity: 1;
 }
 
@@ -174,7 +185,7 @@
 }
 
 .project-container {
-    margin-top: 3em;
+    margin-top: 5em;
 }
 
 .header-project {
@@ -260,6 +271,10 @@
     opacity: 1;
 }
 
+.fa-bars {
+    display: none;
+}
+
 .btn-project:hover {
     background: #1ACF78;
 
@@ -284,29 +299,55 @@
     max-width: 74em;
 }
 
+
 /* Esta regra será aplicada para larguras de tela até 1200px */
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
     .section-project {
         flex-wrap: wrap;
     }
+
     .project {
         width: calc(50% - 1em);
     }
 }
 
 /* Esta regra será aplicada para larguras de tela até 979px */
-@media screen and (max-width: 979px){
+@media screen and (max-width: 979px) {
     .main-header {
-        display: none;
+    }
+
+    .title-project {
+        font-weight: 300;
+        font-size: 24px;
+    }
+    .title-content {
+        font-size: 2.3em;
+        font-weight: 500;
+        border-right: 1px;
+    }
+    .fa-terminal {
+        font-size: 25px;
+    }
+
+    @keyframes typing {
+        to {
+            width: 14em;
+        }
+    }
+
+    @keyframes cursor {
+        from {
+            border-right: 1px solid #909090;
+        }
     }
 }
 
 /* Esta regra será aplicada para larguras de tela até 767px */
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     .project {
         width: calc(100% - 1em);
-
     }
+
     .btn-project {
         margin-left: auto;
         margin-right: auto;
@@ -314,12 +355,43 @@
 }
 
 /* Esta regra será aplicada para larguras de tela até 480px */
-@media screen and (max-width: 480px){
-        .title-content {
-            font-size: calc(3.75em - 40%);
+@media screen and (max-width: 480px) {
+    .main-header {
+        display: none;
+    }
+    .content {
+        padding: 0;
+        max-width: 100%;
+    }
+    .title-content {
+        font-size: 1.8em;
+        font-weight: normal;
+    }
+    @keyframes typing {
+        to {
+            width: 11em;
         }
-        .content {
-            padding-left: 0;
-            padding-right: 0;
-        }
+    }
+
+    .title-project {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+    .content {
+        margin-top: 6em;
+    }
+    .fa-bars {
+        display: block;
+        font-size: 2em;
+    }
+
+
+    /*.title-content {*/
+    /*    font-size: calc(3.75em - 40%);*/
+    /*}*/
+
+    /*.content {*/
+    /*    padding-left: 1em;*/
+    /*    padding-right: 1em;*/
+    /*}*/
 }
