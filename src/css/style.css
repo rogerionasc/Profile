@@ -58,7 +58,7 @@ body {
 
 .animated-cursor {
     border-right: 3px solid #909090;
-    width: 0em;
+    width: 0;
     overflow: hidden;
     animation: typing 2s 2s steps(9) both, cursor 500ms steps(3) infinite both;
 }
@@ -71,13 +71,66 @@ body {
     width: 100%;
 }
 
+.menu-toggle {
+    position: absolute;
+    list-style: none;
+    background: #131313;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: calc(60% - 20px);
+    height: 100%;
+    z-index: 10;
+    border: thin solid #FFFFFF0F;
+    display: none;
+}
+
+.fa-x {
+    margin-bottom: 3em;
+    background: none;
+    color: white;
+}
+
+.social-toggle {
+    background: #0c0c0c;
+    border-radius: 6px;
+}
+
+.item-toggle {
+    background: none;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+.about-toggle {
+    color: white;
+    font-weight: bold;
+    background: none;
+    border-top: thin solid #FFFFFF0F;
+    margin-top: 3em;
+}
+
+.about-toggle .item-toggle {
+    font-weight: 300;
+}
+
+.item-toggle > a {
+    text-decoration: none;
+    background: none;
+}
+
+.item-toggle > a:hover {
+    color: white;
+}
+
 /*   HEADER NAV   */
 .main-header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: calc(100vh - 40px);
-
 }
 
 .logo > img {
@@ -153,7 +206,7 @@ body {
 }
 
 .fa-bars {
-    box-sizing: content-box;
+    /*box-sizing: content-box;*/
     font-size: 28px;
     color: white;
     opacity: 0.6;
@@ -215,7 +268,7 @@ body {
     width: calc(33.33% - 0.5em);
     padding: 1.75em;
     background: #131313;
-    border: 1px solid #131313;
+    border: 1px solid #FFFFFF0F;
     overflow: hidden;
     margin: 0.5em;
 }
@@ -298,11 +351,10 @@ body {
     align-items: center;
     margin-top: 0.5em;
     padding-top: 3.6em;
-    border-top: 1px solid #606060;
+    border-top: 1px solid #FFFFFF0F;
     justify-content: space-between;
     max-width: 74em;
 }
-
 
 /* Esta regra será aplicada para larguras de tela até 1200px */
 @media screen and (max-width: 1200px) {
@@ -361,7 +413,7 @@ body {
 }
 
 /* Esta regra será aplicada para larguras de tela até 480px */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
     .main-header {
         display: none;
     }
@@ -395,10 +447,12 @@ body {
         display: block;
         font-size: 2em;
     }
+
     .name-project {
         font-weight: 200;
         font-size: 18px;
     }
+
     .description-project {
         font-weight: 200;
         font-size: 15px;
@@ -408,9 +462,8 @@ body {
         font-size: 16px;
         font-weight: 300;
     }
-.fa-github {
-    font-size: 24px;
-}
 
-
+    .fa-github {
+        font-size: 24px;
+    }
 }
