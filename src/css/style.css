@@ -12,6 +12,7 @@
 body {
     display: flex;
     padding: 20px;
+    position: relative;
 }
 
 * {
@@ -149,14 +150,16 @@ body {
     margin: 0 0;
     opacity: 0.6;
 }
+
 .fa-bars {
     box-sizing: content-box;
     font-size: 28px;
     color: white;
     opacity: 0.6;
+    position: absolute;
 }
 
-.fa-bars:hover,.fa:hover {
+.fa-bars:hover, .fa:hover {
     opacity: 1;
 }
 
@@ -320,11 +323,13 @@ body {
         font-weight: 300;
         font-size: 24px;
     }
+
     .title-content {
         font-size: 2.3em;
         font-weight: 500;
         border-right: 1px;
     }
+
     .fa-terminal {
         font-size: 25px;
     }
@@ -359,14 +364,17 @@ body {
     .main-header {
         display: none;
     }
+
     .content {
         padding: 0;
         max-width: 100%;
     }
+
     .title-content {
         font-size: 1.8em;
         font-weight: normal;
     }
+
     @keyframes typing {
         to {
             width: 11em;
@@ -377,21 +385,13 @@ body {
         font-size: 1.5em;
         font-weight: 300;
     }
+
     .content {
         margin-top: 6em;
     }
+
     .fa-bars {
         display: block;
         font-size: 2em;
     }
-
-
-    /*.title-content {*/
-    /*    font-size: calc(3.75em - 40%);*/
-    /*}*/
-
-    /*.content {*/
-    /*    padding-left: 1em;*/
-    /*    padding-right: 1em;*/
-    /*}*/
 }
