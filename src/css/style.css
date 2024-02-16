@@ -83,6 +83,7 @@
     max-width: 28px;
     margin: 0 auto;
 }
+
 .nav-social {
     display: flex;
     height: 10em;
@@ -128,7 +129,7 @@
     visibility: hidden;
 }
 
-.item-social:hover .tooltip, .item-social:hover .tooltip::after{
+.item-social:hover .tooltip, .item-social:hover .tooltip::after {
     transform: translateX(10px);
     transition: 0.2s;
     visibility: initial;
@@ -261,10 +262,12 @@
 
 .btn-project:hover {
     background: #1ACF78;
+
     .text-btn {
         background-color: #1ACF78;
         color: white;
     }
+
     .fa-github {
         color: white;
         background: #1ACF78;
@@ -281,40 +284,42 @@
     max-width: 74em;
 }
 
-/*  1200 */
+/* Esta regra será aplicada para larguras de tela até 1200px */
 @media screen and (max-width: 1200px){
     .section-project {
-        display: inline-flex;
         flex-wrap: wrap;
-
     }
     .project {
-        justify-content: flex-start;
         width: calc(50% - 1em);
     }
 }
 
-/*  800 */
-@media screen and(max-width: 800px){
+/* Esta regra será aplicada para larguras de tela até 979px */
+@media screen and (max-width: 979px){
     .main-header {
         display: none;
-
     }
- }
+}
 
-/*  600 */
-@media screen and (max-width: 560px){
-    .section-project {
-        justify-content: center;
-    }
+/* Esta regra será aplicada para larguras de tela até 767px */
+@media screen and (max-width: 767px){
     .project {
         width: calc(100% - 1em);
+
     }
-
     .btn-project {
-
         margin-left: auto;
         margin-right: auto;
     }
 }
 
+/* Esta regra será aplicada para larguras de tela até 480px */
+@media screen and (max-width: 480px){
+        .title-content {
+            font-size: calc(3.75em - 40%);
+        }
+        .content {
+            padding-left: 0;
+            padding-right: 0;
+        }
+}
