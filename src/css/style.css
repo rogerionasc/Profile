@@ -30,7 +30,6 @@ body {
 }
 
 /*  ANIMATED  */
-
 @keyframes typing {
     from {
         width: 0;
@@ -146,6 +145,7 @@ body {
     justify-content: space-between;
     position: fixed;
     height: calc(100vh - 40px);
+    z-index: 11;
 }
 
 .logo > img {
@@ -203,32 +203,6 @@ body {
     border-color: transparent var(--clr-dark) transparent transparent;
     visibility: hidden;
 }
-
-/*.item-social .tooltip {*/
-/*    position: absolute;*/
-/*    white-space: nowrap;*/
-/*    padding: 0.65em;*/
-/*    border-radius: 6px;*/
-/*    left: 4em;*/
-/*    background: var(--clr-dark);;*/
-/*    color: var(--clr-secundary);*/
-/*    font-weight: 400;*/
-/*    font-size: 14px;*/
-/*    visibility: hidden;*/
-/*    z-index: 9999 !important;*/
-/*}*/
-
-/*.item-social .tooltip::after {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    top: calc(25% + 5px);*/
-/*    left: -1.6em;*/
-/*    border-width: 6px;*/
-/*    border-style: solid;*/
-/*    border-color: transparent var(--clr-dark) transparent transparent;*/
-/*    visibility: hidden;*/
-/*    z-index: 8;*/
-/*}*/
 
 .item-social:hover .tooltip, .item-social:hover .tooltip::after {
     transform: translateX(10px);
