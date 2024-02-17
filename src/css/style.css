@@ -77,13 +77,13 @@ body {
 }
 
 .menu-toggle {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -61%;
     list-style: none;
     background: var(--clr-secundary);
     padding: 20px;
-    height: 100%;
+    height: 100vh;
     z-index: 10;
     min-width: 60%;
     border: thin solid #FFFFFF0F;
@@ -485,6 +485,12 @@ body {
     }
 }
 
+@media screen and (min-width: 520px) {
+    .menu-toggle {
+        display: none !important;
+    }
+}
+
 /* Esta regra será aplicada para larguras de tela até 767px */
 @media screen and (max-width: 767px) {
     .project {
@@ -497,7 +503,7 @@ body {
     }
 }
 
-/* Esta regra será aplicada para larguras de tela até 480px */
+/* Esta regra será aplicada para larguras de tela até 520px */
 @media screen and (max-width: 520px) {
     .main-header {
         display: none;
