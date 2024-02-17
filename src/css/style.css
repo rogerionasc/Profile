@@ -1,8 +1,12 @@
 :root {
     --ff-primary: "Poppins", sans-serif;
     --clr-primary: #0c0c0c;
-    --clr-secundary: #909090;
-    --clr-dark: #ddd;
+    --clr-secundary: #dddddd;
+    --clr-tertiary: #909090;
+    --clr-dark: #131313;
+    --clr-orange: #D2691EFF;
+    --clr-green: #1ACF78;
+    --clr-blue: #1E90FFFF;
     --c1: rgba(168, 239, 255, 1);
     --c2: rgba(168, 239, 255, 0.1);
     --d: 2500ms;
@@ -19,8 +23,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #0c0c0c;
-    color: #909090;
+    background: var(--clr-primary);
+    color: var(--clr-secundary);
     font-family: var(--ff-primary);
     font-weight: 200;
 }
@@ -38,7 +42,7 @@ body {
 
 @keyframes cursor {
     from {
-        border-right: 3px solid #909090;
+        border-right: 3px solid var(--clr-secundary);
     }
     to {
         border-right-color: transparent;
@@ -58,7 +62,7 @@ body {
 }
 
 .animated-cursor {
-    border-right: 3px solid #909090;
+    border-right: 3px solid var(--clr-secundary);
     width: 0;
     overflow: hidden;
     animation: typing 2s 2s steps(9) both, cursor 500ms steps(3) infinite both;
@@ -78,7 +82,7 @@ body {
     top: 0;
     left: -61%;
     list-style: none;
-    background: #ffffff;
+    background: var(--clr-secundary);
     padding: 20px;
     height: 100%;
     z-index: 10;
@@ -92,12 +96,12 @@ body {
 .fa-x {
     margin-bottom: 3em;
     background: none;
-    color: #0c0c0c;
+    color: var(--clr-primary);
     font-size: 28px;
 }
 
 .social-toggle {
-    background: #dddddd;
+    background: var(--clr-secundary);
     border-radius: 6px;
 }
 
@@ -118,11 +122,11 @@ body {
 .about-toggle .item-toggle a {
     font-size: 20px;
     font-weight: 400;
-    color: #0c0c0c;
+    color: var(--clr-primary);
 }
 
 .social-toggle .item-toggle a {
-    color: #0c0c0c;
+    color: var(--clr-primary);
 }
 
 .item-toggle > a {
@@ -146,7 +150,7 @@ body {
 
 .logo > img {
     box-sizing: content-box;
-    background: #fff !important;
+    background: var(--clr-secundary);
     display: flex;
     border-radius: 6px;
     padding: 10px;
@@ -181,12 +185,12 @@ body {
     padding: 0.65em;
     border-radius: 6px;
     left: 4em;
-    background: #131313;
-    color: #909090;
+    background: var(--clr-dark);;
+    color: var(--clr-secundary);
     font-weight: 400;
     font-size: 14px;
     visibility: hidden;
-    z-index: 10;
+    z-index: 9;
 }
 
 .item-social .tooltip::after {
@@ -196,7 +200,7 @@ body {
     left: -1.6em;
     border-width: 6px;
     border-style: solid;
-    border-color: transparent #131313 transparent transparent;
+    border-color: transparent var(--clr-dark) transparent transparent;
     visibility: hidden;
 }
 
@@ -209,7 +213,7 @@ body {
 .fa {
     box-sizing: content-box;
     font-size: 28px;
-    color: #909090;
+    color: var(--clr-secundary);
     padding: 0 10px 0 10px;
     max-width: 28px;
     margin: 0 0;
@@ -219,7 +223,7 @@ body {
 .fa-bars {
     /*box-sizing: content-box;*/
     font-size: 28px;
-    color: white;
+    color: var(--clr-secundary);
     opacity: 0.6;
     position: absolute;
 }
@@ -238,7 +242,7 @@ body {
 .title-content {
     font-size: 3.75em;
     font-weight: 500;
-    color: white;
+    color: var(--clr-secundary);
     white-space: nowrap;
 }
 
@@ -250,6 +254,7 @@ body {
     line-height: 20px;
     word-spacing: 5px;
     margin: 16px 0;
+    color: var(--clr-tertiary);
 }
 
 .project-container {
@@ -262,25 +267,86 @@ body {
 }
 
 .fa-terminal {
-    color: white;
+    color: var(--clr-secundary);
     opacity: 0.6;
     font-size: 35px;
     padding: 10px 20px 10px 0;
 }
 
 .title-project {
-    color: white;
+    color: var(--clr-secundary);
     font-size: 2.2em;
     font-weight: 400;
 }
 
 .project {
     width: calc(33.33% - 0.5em);
-    padding: 1.75em;
-    background: #131313;
+    padding: 1em;
+    background: var(--clr-dark);;
     border: 1px solid #FFFFFF0F;
     overflow: hidden;
     margin-top: 2em;
+}
+
+.img-cropper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-cropper > img {
+    display: block;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.toolbar-status-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    background: none;
+}
+
+.fa-circle {
+    font-size: 8px;
+    padding-left: 3px;
+}
+
+.pendent {
+    color: var(--clr-orange);
+}
+
+.concluded {
+    color: var(--clr-green);
+}
+
+.production {
+    color: var(--clr-blue);
+}
+
+.status {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+.tools-develop {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 1em 0;
+    background: none;
+}
+
+.tools-develop > .fa-brands {
+    display: flex;
+    padding: 5px;
+    background: none;
 }
 
 .project:hover {
@@ -289,18 +355,23 @@ body {
 }
 
 .footer-project {
-    background: #131313;
+    background: var(--clr-dark);
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .name-project {
     font-weight: 300;
     font-size: 24px;
-    color: white;
-    background: #131313;
+    color: var(--clr-secundary);
+    background: var(--clr-dark);
 }
 
 .description-project {
-    background: #131313;
+    background: var(--clr-dark);
+    color: var(--clr-tertiary);
 }
 
 .btn-project {
@@ -311,18 +382,18 @@ body {
     border-radius: 6px;
     padding: 10px;
     max-width: 9em;
-    background: white;
+    background: var(--clr-secundary);
     text-decoration: none;
     margin-top: 2em;
 }
 
 .text-btn {
-    background-color: white;
+    background-color: var(--clr-secundary);
     display: flex;
     align-items: center;
     font-size: 18px;
     font-weight: 500;
-    color: #131313;
+    color: var(--clr-dark);;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -331,8 +402,8 @@ body {
 .fa-github {
     display: flex;
     border-radius: 50%;
-    background: white;
-    color: #131313;
+    background: var(--clr-secundary);
+    color: var(--clr-dark);;
     padding: 2px;
     margin: 0;
     opacity: 1;
@@ -343,27 +414,29 @@ body {
 }
 
 .btn-project:hover {
-    background: #1ACF78;
+    background: var(--clr-green);
 
     .text-btn {
-        background-color: #1ACF78;
-        color: white;
+        background-color: var(--clr-green);
+        color: var(--clr-secundary);
     }
 
     .fa-github {
-        color: white;
-        background: #1ACF78;
+        color: var(--clr-secundary);
+        background: var(--clr-green);
     }
 }
 
 .section-project {
     display: flex;
-    align-items: center;
     margin-top: 0.5em;
     padding-top: 3.6em;
     border-top: 1px solid #FFFFFF0F;
-    justify-content: space-between;
+    align-items: center;
+    /*justify-content: space-between;*/
     max-width: 74em;
+    flex-wrap: wrap;
+    gap: 0.5em;
 }
 
 /* Esta regra será aplicada para larguras de tela até 1200px */
@@ -405,7 +478,7 @@ body {
 
     @keyframes cursor {
         from {
-            border-right: 1px solid #909090;
+            border-right: 1px solid var(--clr-secundary);
         }
     }
 }
@@ -413,7 +486,7 @@ body {
 /* Esta regra será aplicada para larguras de tela até 767px */
 @media screen and (max-width: 767px) {
     .project {
-        width: calc(100% - 1em);
+        width: 100%
     }
 
     .btn-project {
